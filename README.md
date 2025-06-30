@@ -1,1 +1,1 @@
-# rps-flask-app
+# rps-flask-game
