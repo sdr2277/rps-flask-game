@@ -12,22 +12,19 @@ A full-stack, server-side web application built with Python and the Flask framew
 * **State Preservation Architecture:** Leverages Flask client-side session cookies to track ongoing player win-loss streaks securely without local memory leakage.
 * **Matrix Evaluation Engine:** Implements structural lookup validation matrices to execute instant score computations on the backend server.
 * **RESTful Routing Framework:** Employs precise GET and POST request parameters to transition the UI seamlessly without requiring heavy frontend JavaScript engines.
-* **Template Generation:** Engineered with Jinja2 parsing expressions to conditionally inject dynamic response layouts and styling blocks down to the viewport.
+* **Unified Conditional Rendering:** Utilizes a single structural interface layout (index.html) driven by Jinja2 logic expressions to dynamically switch between the entry portal, active round processing, and win/loss result states without hard page refreshes
 
 ### 📁 Repository Directory Breakdown
 
-text
 
-├── app.py                 # Core Flask backend router & application gateway
-├── requirements.txt       # Python deployment dependencies
-├── static/
-│   └── style.css          # Core layouts, game typography, and visual styling
-└── templates/
-    ├── base.html          # Standard HTML skeleton and global layouts
-    ├── game.html          # Core gameplay component workspace
-    └── index.html         # Start screen landing menu interface
+├── app.py                 # Core Flask backend server and web route managers
+├── logic.py               # Game mechanics engine handling win/loss scoring matrices
+├── requirements.txt       # Production python engine dependency versions
+├── render.yml             # Blueprint configuration file for Infrastructure-as-Code automation
+├── templates/             # View layer containing Jinja2 template components
+│   └── index.html         # Injected unified layout handling all game states and loops
+└── README.md              # Technical engineering documentation
 
-Use code with caution.
 
 ### 🧰 Technology Stack
 
